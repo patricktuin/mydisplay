@@ -129,26 +129,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = REPOSITORY_ROOT + '/static/'
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
-
 STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = [
-os.path.join(BASE_DIR, 'templates'),
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, '../static')
-
-STATICFILES_DIRS = (
- os.path.join(BASE_DIR, 'static', 'dirs'),
-)
+STATIC_ROOT = REPOSITORY_ROOT + '/static/'
 
 
 LOGIN_URL = '/accounts/login'
