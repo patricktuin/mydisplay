@@ -129,8 +129,21 @@ USE_L10N = True
 
 USE_TZ = True
 
+# STATIC_URL = '/static/'
+# STATIC_ROOT = REPOSITORY_ROOT + '/static/'
+
 STATIC_URL = '/static/'
-STATIC_ROOT = REPOSITORY_ROOT + '/static/'
+
+TEMPLATE_DIRS = [
+os.path.join(BASE_DIR, 'templates'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+
+STATICFILES_DIRS = (
+ os.path.join(BASE_DIR, 'static', 'dirs'),
+)
+
 
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/'
