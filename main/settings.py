@@ -22,7 +22,7 @@ ALLOWED_HOSTS = [
     'www.my-display.nl',
     'server1.my-display.nl',
     'my-display.nl',
-    'mydisplay-web-mydisplay.192.168.241.200.xip.io/'
+    '*',
 ]
 
 # Application definition
