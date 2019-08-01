@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': 'mydisplay',
         'USER': 'mydisplay',
         'PASSWORD': 'mydisplay',
-        'HOST': '172.17.0.9',
+        'HOST': '172.17.0.8',
         'PORT': '5432',
     }
 }
@@ -129,7 +129,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = 'http://nginx-static-mydisplay.192.168.241.200.xip.io /'
+STATIC_URL = 'http://nginx-static-mydisplay.192.168.241.200.xip.io/'
 STATIC_ROOT = REPOSITORY_ROOT + '/static/'
 
 
