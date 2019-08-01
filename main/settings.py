@@ -16,7 +16,7 @@ REPOSITORY_ROOT = os.path.abspath(os.path.dirname(PROJECT_ROOT))
 SECRET_KEY = 'nz3*5*&tna6f&30ma$^ns)_n@r9_pb10(d4h)!b(^%!^uhbzjw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.my-display.nl', 'server1.my-display.nl', 'my-display.nl']
 
