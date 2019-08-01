@@ -18,8 +18,12 @@ SECRET_KEY = 'nz3*5*&tna6f&30ma$^ns)_n@r9_pb10(d4h)!b(^%!^uhbzjw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.my-display.nl', 'server1.my-display.nl', 'my-display.nl']
-
+ALLOWED_HOSTS = [
+    'www.my-display.nl',
+    'server1.my-display.nl',
+    'my-display.nl',
+    'http://mydisplay-web-mydisplay.192.168.241.200.xip.io/'
+]
 
 # Application definition
 
@@ -80,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -94,7 +97,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -114,7 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -128,14 +129,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 STATIC_URL = '/static/'
 STATIC_ROOT = REPOSITORY_ROOT + '/static/'
 
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/'
 LOGOUT_REDIRECT_URL = '/accounts/login'
-
 
 try:
     from main.params import *
