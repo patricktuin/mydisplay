@@ -1,0 +1,82 @@
+{% extends 'main/../../../main/templates/main/layout.html' %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <!--Data from the Display model. Only to be used for information, not for modification-->
+        <div class="display-data">
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Display model</label>
+                <label class="col-sm-4 col-form-label">{{ display.model }}</label>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Serial number</label>
+                <label class="col-sm-4 col-form-label">{{ display.serial_number }}</label>
+            </div>
+            <!--The first form object. Only used for setting a friendly name and font size.-->
+            {% for field in form %}
+                {% if field.name == 'friendly_name' %}
+
+                    <div class="form-group row">
+                        <label for="{{ field.name }}" class="col-sm-4 col-form-label">Friendly name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="{{ field.name }}" name="{{ field.name }}"
+                                   value="{{ field.value }}">
+                        </div>
+                    </div>
+                {% endif %}
+                {% if field.name == 'font_size' %}
+                    <div class="form-group row">
+                        <label for="{{ field.name }}" class="col-sm-4 col-form-label">Font size</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="{{ field.name }}" name="{{ field.name }}">
+                                {% for id, name in form.font_size.field.choices %}
+                                    <option value="{{ id }}" {% if form.font_size.initial == id %}
+                                            selected {% endif %}>{{ name }}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <!--The second form with references from Display to the Lines-->
+        <div class="display-lines">
+            <table class="table">
+                {{ lines.management_form }}
+                {% for form in lines.forms %}
+                    {% if forloop.first %}
+                        <thead>
+                        <tr>
+                            {% for field in form.visible_fields %}
+                                <th>{{ field.label|capfirst }}</th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                    {% endif %}
+                    <tr class="{% cycle row1 row2 %} formset_row">
+                        {% for field in form.visible_fields %}
+                            <td>
+                                {# Include the hidden fields in the form #}
+                                {% if forloop.first %}
+                                    {% for hidden in form.hidden_fields %}
+                                        {{ hidden }}
+                                    {% endfor %}
+                                {% endif %}
+                                {{ field.errors.as_ul }}
+                                {{ field }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+
+                {% endfor %}
+            </table>
+            <button type="submit" class="btn btn-primary mb-2">Save</button>
+        </div>
+    </form>
+
+    <input type="submit" value="Add a line">
+
+{% endblock %}

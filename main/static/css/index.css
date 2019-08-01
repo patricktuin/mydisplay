@@ -1,0 +1,19 @@
+.display-data{
+    background-color: #25aaff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.display-lines{
+    background-color: #8cff01;
+}
+
+body{
+    background-color: #fffdf4;
+}
+
+tr td:hover{
+    cursor: pointer;
+}

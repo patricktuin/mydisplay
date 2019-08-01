@@ -1,0 +1,5 @@
+venv
+params.py
+*.sqlite3
+*.pyc
+.idea

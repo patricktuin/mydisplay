@@ -1,0 +1,35 @@
+{% extends 'main/../../../main/templates/main/layout.html' %}
+
+{% block content %}
+
+    <H1>Display overview van {{ user }}</H1>
+
+
+    <div class="row">
+        <div class="col-md">
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Display model</th>
+                    <th scope="col">Serial number</th>
+                    <th scope="col">Friendly name</th>
+                    <th scope="col">Max lines</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for display in object_list %}
+                    <tr onclick="window.document.location='{% url 'accounts:settings' display.pk %}';">
+                        <td>{{ display.model.display_model }}</td>
+                        <td>{{ display.serial_number }}</td>
+                        <td>{{ display.friendly_name }}</td>
+                        <td>{{ display.model.max_lines }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

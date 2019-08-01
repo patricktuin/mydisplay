@@ -1,0 +1,455 @@
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir /Users/patrick/Programming/mydisplay/src/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/admin/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/auth/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/contenttypes/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/sessions/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/messages/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/contrib/staticfiles/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/src/main/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/src/accounts/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/src/displays/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/src/topics/locale with glob **/*.mo.
+Watching dir /Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/rest_framework/locale with glob **/*.mo.
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.011) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "displays_display"."id", "displays_display"."model_id", "displays_display"."serial_number", "displays_display"."friendly_name", "displays_display"."customer_id", "displays_display"."font_size" FROM "displays_display" WHERE "displays_display"."id" = 2; args=(2,)
+(0.000) SELECT "displays_display"."id", "displays_display"."model_id", "displays_display"."serial_number", "displays_display"."friendly_name", "displays_display"."customer_id", "displays_display"."font_size" FROM "displays_display" WHERE "displays_display"."id" = 2; args=(2,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-05-16 16:59:20.605504' AND "django_session"."session_key" = 'd43nys9r9dwixfy0zlkylwg59qx111bf'); args=('2019-05-16 16:59:20.605504', 'd43nys9r9dwixfy0zlkylwg59qx111bf')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'login_nav' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [login_nav] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x10315ad08>>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172eb8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10301cf98>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x10301cda0>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x1030ed160>}, {}]
+(0.000) SELECT "displays_mydisplaymodel"."id", "displays_mydisplaymodel"."display_model", "displays_mydisplaymodel"."max_lines" FROM "displays_mydisplaymodel" WHERE "displays_mydisplaymodel"."id" = 1; args=(1,)
+(0.000) SELECT "displays_line"."id", "displays_line"."display_id", "displays_line"."line", "displays_line"."user_text", "displays_line"."topic_id" FROM "displays_line" WHERE "displays_line"."display_id" = 2 ORDER BY "displays_line"."id" ASC; args=(2,)
+Exception while resolving variable 'row1' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row1] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'X9mk317NMKo0unqtgzobirNY64f3F0JxUr7VwM8CimuXWA7qgJ4XSH48ciPJYBpK'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172eb8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10301cf98>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x10301cda0>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x1030ed160>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x103167e10>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x10316f0b8>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 4, 'revcounter0': 3, 'first': True, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row2' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row2] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'X9mk317NMKo0unqtgzobirNY64f3F0JxUr7VwM8CimuXWA7qgJ4XSH48ciPJYBpK'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172eb8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10301cf98>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x10301cda0>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x1030ed160>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x103167e10>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x10316f0b8>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row1' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row1] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'X9mk317NMKo0unqtgzobirNY64f3F0JxUr7VwM8CimuXWA7qgJ4XSH48ciPJYBpK'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172eb8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10301cf98>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x10301cda0>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x1030ed160>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x103167e10>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x10316f0b8>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row2' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row2] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'X9mk317NMKo0unqtgzobirNY64f3F0JxUr7VwM8CimuXWA7qgJ4XSH48ciPJYBpK'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172eb8>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x10301cf98>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x10301cda0>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x1030ed160>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x103167e10>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x10316f0b8>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+"GET /accounts/settings/2 HTTP/1.1" 200 12974
+(0.000) SELECT "displays_display"."id", "displays_display"."model_id", "displays_display"."serial_number", "displays_display"."friendly_name", "displays_display"."customer_id", "displays_display"."font_size" FROM "displays_display" WHERE "displays_display"."id" = 2; args=(2,)
+(0.000) SELECT COUNT(*) AS "__count" FROM "displays_line" WHERE "displays_line"."display_id" = 2; args=(2,)
+(0.000) SELECT "displays_mydisplaymodel"."id", "displays_mydisplaymodel"."display_model", "displays_mydisplaymodel"."max_lines" FROM "displays_mydisplaymodel" INNER JOIN "displays_display" ON ("displays_mydisplaymodel"."id" = "displays_display"."model_id") WHERE "displays_display"."id" = 2; args=(2,)
+"GET /display/add_line/2 HTTP/1.1" 302 0
+(0.000) SELECT "displays_display"."id", "displays_display"."model_id", "displays_display"."serial_number", "displays_display"."friendly_name", "displays_display"."customer_id", "displays_display"."font_size" FROM "displays_display" WHERE "displays_display"."id" = 2; args=(2,)
+(0.000) SELECT "displays_display"."id", "displays_display"."model_id", "displays_display"."serial_number", "displays_display"."friendly_name", "displays_display"."customer_id", "displays_display"."font_size" FROM "displays_display" WHERE "displays_display"."id" = 2; args=(2,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-05-16 16:59:27.523219' AND "django_session"."session_key" = 'd43nys9r9dwixfy0zlkylwg59qx111bf'); args=('2019-05-16 16:59:27.523219', 'd43nys9r9dwixfy0zlkylwg59qx111bf')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Exception while resolving variable 'login_nav' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'login_nav'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [login_nav] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x103073b70>>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172320>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1030e29b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x1030e2b70>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x10316f390>}, {}]
+(0.000) SELECT "displays_mydisplaymodel"."id", "displays_mydisplaymodel"."display_model", "displays_mydisplaymodel"."max_lines" FROM "displays_mydisplaymodel" WHERE "displays_mydisplaymodel"."id" = 1; args=(1,)
+(0.000) SELECT "displays_line"."id", "displays_line"."display_id", "displays_line"."line", "displays_line"."user_text", "displays_line"."topic_id" FROM "displays_line" WHERE "displays_line"."display_id" = 2 ORDER BY "displays_line"."id" ASC; args=(2,)
+Exception while resolving variable 'row1' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row1] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'c7B7qITsu6QGISoYVNSSZGCRjeu4H9il9pmITtUh0IWDa55VVXyEzWT1ps4K0KYy'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172320>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1030e29b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x1030e2b70>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x10316f390>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x1031670f0>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x103184550>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 0, 'counter': 1, 'revcounter': 4, 'revcounter0': 3, 'first': True, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row2' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row2] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'c7B7qITsu6QGISoYVNSSZGCRjeu4H9il9pmITtUh0IWDa55VVXyEzWT1ps4K0KYy'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172320>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1030e29b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x1030e2b70>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x10316f390>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x1031670f0>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x103184550>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 1, 'counter': 2, 'revcounter': 3, 'revcounter0': 2, 'first': False, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row1' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row1] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'c7B7qITsu6QGISoYVNSSZGCRjeu4H9il9pmITtUh0IWDa55VVXyEzWT1ps4K0KYy'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172320>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1030e29b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x1030e2b70>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x10316f390>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x1031670f0>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x103184550>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 2, 'counter': 3, 'revcounter': 2, 'revcounter0': 1, 'first': False, 'last': False}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+Exception while resolving variable 'row2' in template 'accounts/settings.html'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'row2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [row2] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'c7B7qITsu6QGISoYVNSSZGCRjeu4H9il9pmITtUh0IWDa55VVXyEzWT1ps4K0KYy'>, 'request': <WSGIRequest: GET '/accounts/settings/2'>, 'user': <SimpleLazyObject: <User: patrick>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x103172320>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1030e29b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}, 'STATIC_URL': '/static/'}, {}, {'object': <Display: 2222>, 'display': <Display: 2222>, 'form': <DisplayForm bound=False, valid=Unknown, fields=(friendly_name;font_size)>, 'view': <accounts.views.DisplayLineUpdateView object at 0x1030e2b70>, 'lines': <django.forms.formsets.LineFormFormSet object at 0x10316f390>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <form method="post">'>, <django.template.defaulttags.CsrfTokenNode object at 0x1031670f0>, <TextNode: '\n        <!--Data from th'>, <Variable Node: display.model>, <TextNode: '</label>\n            </di'>, <Variable Node: display.serial_number>, <TextNode: '</label>\n            </di'>, <ForNode: for field in form, tail_len: 5>, <TextNode: '\n        </div>\n        <'>, <Variable Node: lines.management_form>, <TextNode: '\n                '>, <ForNode: for form in lines.forms, tail_len: 7>, <TextNode: '\n            </table>\n   '>, <django.template.defaulttags.URLNode object at 0x103184550>, <TextNode: '\'">\n\n'>]>}, {'forloop': {'parentloop': {}, 'counter0': 3, 'counter': 4, 'revcounter': 1, 'revcounter0': 0, 'first': False, 'last': True}, 'form': <LineForm bound=False, valid=Unknown, fields=(display;line;user_text;topic;id;DELETE)>}]
+(0.000) SELECT "topics_topic"."id", "topics_topic"."topic" FROM "topics_topic"; args=()
+"GET /accounts/settings/2 HTTP/1.1" 200 13127
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'displays.urls' from '/Users/patrick/Programming/mydisplay/src/displays/urls.py'> (displays:display) 'display/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern '' [name='displays']>], [<URLResolver <module 'displays.api_urls' from '/Users/patrick/Programming/mydisplay/src/displays/api_urls.py'> (None:None) 'api/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern '' [name='displays']>]], 'path': 'accounts/settingsdhfghgfhgf'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'displays.urls' from '/Users/patrick/Programming/mydisplay/src/displays/urls.py'> (displays:display) 'display/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern '' [name='displays']>], [<URLResolver <module 'displays.api_urls' from '/Users/patrick/Programming/mydisplay/src/displays/api_urls.py'> (None:None) 'api/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern '' [name='displays']>]], 'path': 'accounts/settingsdhfghgfhgf'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'displays.urls' from '/Users/patrick/Programming/mydisplay/src/displays/urls.py'> (displays:display) 'display/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/urls/resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'displays.urls' from '/Users/patrick/Programming/mydisplay/src/displays/urls.py'> (displays:display) 'display/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) 'accounts/'>, <URLPattern '' [name='displays']>], [<URLResolver <module 'displays.api_urls' from '/Users/patrick/Programming/mydisplay/src/displays/api_urls.py'> (None:None) 'api/'>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern 'settings/<int:pk>' [name='settings']>], [<URLResolver <module 'accounts.urls' from '/Users/patrick/Programming/mydisplay/src/accounts/urls.py'> (accounts:accounts) ''>, <URLPattern '' [name='displays']>]], 'path': 'accounts/settingsdhfghgfhgf'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patrick/Programming/mydisplay/venv/lib/python3.7/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'displays.api_urls' from '/Users/patrick/Programming/mydisplay/src/displays/api_urls.py'> (None:None) 'api/'>
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+File /Users/patrick/Programming/mydisplay/src/main/settings.py. is_changed: False, is_new: True
+File /Users/patrick/Programming/mydisplay/src/main/settings.py previous mtime: None, current mtime: 1558026019.966727
+/Users/patrick/Programming/mydisplay/src/main/settings.py notified as changed. Signal results: [(<function translation_file_changed at 0x1025488c8>, None)].
+/Users/patrick/Programming/mydisplay/src/main/settings.py changed, reloading.
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640
+Not Found: /accounts/settingsdhfghgfhgf
+"GET /accounts/settingsdhfghgfhgf HTTP/1.1" 404 3640

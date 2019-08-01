@@ -1,0 +1,51 @@
+{% extends 'main/../../../main/templates/main/layout.html' %}
+
+
+{% block content %}
+    <h1>SettingsForm</h1>
+
+
+    <h1>{{ form.display }}</h1>
+
+
+
+
+    <form method="POST">
+        {% csrf_token %}
+
+{{ form }}
+
+{#        {% for line in form.x %}#}
+{#            {{ line }}#}
+{#        {% endfor %}#}
+{##}
+{##}
+{##}
+{##}
+{#        {% for line in form.lines %}#}
+{#            <div class="form-group row">#}
+{#                <label for="staticEmail" class="col-sm-2 col-form-label">{{ line }}</label>#}
+{##}
+{#                <div class="col-sm-4">#}
+{#                    <div class="form-group">#}
+{##}
+{#                        <select class="form-control" id="exampleFormControlSelect1">#}
+{#                            {% for topic in form.topic %}#}
+{#                                {{ topic }}#}
+{##}
+{#                            {% endfor %}#}
+{##}
+{#                        </select>#}
+{##}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        {% endfor %}#}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+{% endblock %}
