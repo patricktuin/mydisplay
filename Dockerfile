@@ -10,6 +10,6 @@ RUN pip install -r requirements.txt
 RUN ./manage.py migrate
 RUN ./manage.py collectstatic --no-input
 
-CMD gunicorn openshift_django.wsgi -b 0.0.0.0:8000
+CMD gunicorn openshift_django.wsgi -b 0.0.0.0:8080
 
-EXPOSE 8000
+EXPOSE 8080

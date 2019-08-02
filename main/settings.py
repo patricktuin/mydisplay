@@ -130,7 +130,7 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = 'http://nginx-static-mydisplay.192.168.241.200.xip.io/'
-STATIC_ROOT = REPOSITORY_ROOT + '/static/'
+STATIC_ROOT = REPOSITORY_ROOT + '/src/static/'
 
 
 LOGIN_URL = '/accounts/login'
