@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': 'mydisplay',
         'USER': 'mydisplay',
         'PASSWORD': 'mydisplay',
-        'HOST': '172.17.0.3',
+        'HOST': '172.17.0.6',
         'PORT': '5432',
     }
 }
